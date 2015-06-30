@@ -26,9 +26,12 @@
       <h1>You've left a lot of your fingerprints on this newsroom.</h1>
     
     </section>
-    
+
     <section class="page audrey">
-      <!-- your message and interactive element goes here -->
+
+      <h1>What will we do without you?</h1>
+      <div id="trafficContainer"></div>
+
     </section>
     
     <section class="page team">
@@ -37,6 +40,35 @@
     
   </main>
   
+  <script type="text/html" id="road-template">
+    <div class="road">
+      <h2 class="road-name">Eastbound</h2>
+      <% trafficData.forEach(function(route) { %>
+        <div class="route">
+          <span class="route-name"><%= route.route %></span>
+          <div class="route-method" style="background: <%=route.regularcolor%>">
+            <div class="time">
+              <%= route.regular %>
+            </div>
+            <div class="which"></div>
+          </div>
+          <div class="route-method" style="background: <%=route.hovcolor%>">
+            <div class="time">
+              <%= route.hov %>
+            </div>
+            <div class="which">HOV</div>
+          </div>
+          <div class="route-method" style="background: <%=route.expresscolor%>">
+            <div class="time">
+              <%= route.express %>
+            </div>
+            <div class="which">Express</div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </script>
+
   <script src="script.js"></script>
   </body>
 </html>

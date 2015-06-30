@@ -63,6 +63,7 @@ section.page {
           justify-content: center;
   text-align: center;
   font-size: 40px;
+  font-family: Helvetica;
 }
 section.page::after {
   content: " ";
@@ -112,10 +113,26 @@ section.page.audrey {
   -webkit-transform: perspective(5000px) rotateY(-0.05deg);
           transform: perspective(5000px) rotateY(-0.05deg);
   z-index: 996;
+  font-size: 16px;
 }
 section.page.audrey.turned {
   -webkit-transform: perspective(5000px) rotateY(-162deg);
           transform: perspective(5000px) rotateY(-162deg);
+}
+section.page.audrey .road {
+  max-width: 400px;
+  margin: auto;
+}
+section.page.audrey .road-name {
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  margin: 0;
+}
+section.page.audrey .route-method {
+  display: inline-block;
 }
 section.page.team {
   -webkit-transform: perspective(5000px) rotateY(0deg);

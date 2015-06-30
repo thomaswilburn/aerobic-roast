@@ -48,6 +48,7 @@ section.page {
   justify-content: center;
   text-align: center;
   font-size: 40px;
+  font-family: Helvetica;
 
   &::after {
     content: " ";
@@ -92,6 +93,12 @@ section.page.audrey {
   z-index: 996;
   &.turned {
     transform: perspective(@perspective) rotateY(-162deg);
+  }
+  font-size: 16px;
+  .road {
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
   }
 }
 
