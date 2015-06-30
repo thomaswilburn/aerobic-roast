@@ -7,22 +7,30 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background: #344;
 }
 main.book {
   position: fixed;
   top: 5px;
-  right: 5px;
+  right: 20px;
   width: 100%;
-  height: calc(90%);
+  height: calc(100% - 10px);
   -webkit-transform-origin: right;
       -ms-transform-origin: right;
           transform-origin: right;
-  -webkit-transform: perspective(1000px) translateZ(-700px) rotateY(-10deg);
-          transform: perspective(1000px) translateZ(-700px) rotateY(-10deg);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transform: perspective(5000px) translateZ(-4000px) translateX(-50%) rotateY(90deg);
+          transform: perspective(5000px) translateZ(-4000px) translateX(-50%) rotateY(90deg);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+          transition: transform 1s ease-in-out;
 }
-main.book section.page {
+.ready main.book {
+  -webkit-transform: perspective(5000px) translateZ(-50px) rotateY(-10deg);
+          transform: perspective(5000px) translateZ(-50px) rotateY(-10deg);
+}
+section.page {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,10 +46,25 @@ main.book section.page {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border: 1px solid gray;
-  background: -webkit-linear-gradient(top, white, #f8f8f8);
-  background: linear-gradient(to bottom, white, #f8f8f8);
+  background: -webkit-linear-gradient(top, white, #eeeeee);
+  background: linear-gradient(to bottom, white, #eeeeee);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 40px;
 }
-main.book section.page::after {
+section.page::after {
   content: " ";
   position: absolute;
   -webkit-transform-origin: 50% 50%;
@@ -59,19 +82,47 @@ main.book section.page::after {
           backface-visibility: hidden;
 }
 section.page.cover {
-  -webkit-transform: perspective(1000px) rotateY(-4deg);
-          transform: perspective(1000px) rotateY(-4deg);
+  -webkit-transform: perspective(5000px) rotateY(-0.2deg);
+          transform: perspective(5000px) rotateY(-0.2deg);
   z-index: 999;
 }
 section.page.cover.turned {
-  -webkit-transform: perspective(1000px) rotateY(-165deg);
-          transform: perspective(1000px) rotateY(-165deg);
+  -webkit-transform: perspective(5000px) rotateY(-165deg);
+          transform: perspective(5000px) rotateY(-165deg);
 }
 section.page.clams {
-  -webkit-transform: perspective(1000px) rotateY(-3deg);
-          transform: perspective(1000px) rotateY(-3deg);
+  -webkit-transform: perspective(5000px) rotateY(-0.15deg);
+          transform: perspective(5000px) rotateY(-0.15deg);
+  z-index: 998;
 }
 section.page.clams.turned {
-  -webkit-transform: perspective(1000px) rotateY(-164deg);
-          transform: perspective(1000px) rotateY(-164deg);
+  -webkit-transform: perspective(5000px) rotateY(-164deg);
+          transform: perspective(5000px) rotateY(-164deg);
+}
+section.page.thomas {
+  -webkit-transform: perspective(5000px) rotateY(-0.1deg);
+          transform: perspective(5000px) rotateY(-0.1deg);
+  z-index: 997;
+}
+section.page.thomas.turned {
+  -webkit-transform: perspective(5000px) rotateY(-163deg);
+          transform: perspective(5000px) rotateY(-163deg);
+}
+section.page.audrey {
+  -webkit-transform: perspective(5000px) rotateY(-0.05deg);
+          transform: perspective(5000px) rotateY(-0.05deg);
+  z-index: 996;
+}
+section.page.audrey.turned {
+  -webkit-transform: perspective(5000px) rotateY(-162deg);
+          transform: perspective(5000px) rotateY(-162deg);
+}
+section.page.team {
+  -webkit-transform: perspective(5000px) rotateY(0deg);
+          transform: perspective(5000px) rotateY(0deg);
+  z-index: 995;
+}
+section.page.team.turned {
+  -webkit-transform: perspective(5000px) rotateY(-161deg);
+          transform: perspective(5000px) rotateY(-161deg);
 }
