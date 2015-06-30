@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+main.book {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 100%;
+  height: calc(90%);
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: perspective(1000px) translateZ(-700px) rotateY(-10deg);
+          transform: perspective(1000px) translateZ(-700px) rotateY(-10deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+main.book section.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+  -webkit-transform-origin: left 50%;
+      -ms-transform-origin: left 50%;
+          transform-origin: left 50%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid gray;
+  background: -webkit-linear-gradient(top, white, #f8f8f8);
+  background: linear-gradient(to bottom, white, #f8f8f8);
+}
+main.book section.page::after {
+  content: " ";
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  background: -webkit-linear-gradient(top, #f8f8f8, #eeeeee);
+  background: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+section.page.cover {
+  -webkit-transform: perspective(1000px) rotateY(-4deg);
+          transform: perspective(1000px) rotateY(-4deg);
+  z-index: 999;
+}
+section.page.cover.turned {
+  -webkit-transform: perspective(1000px) rotateY(-165deg);
+          transform: perspective(1000px) rotateY(-165deg);
+}
+section.page.clams {
+  -webkit-transform: perspective(1000px) rotateY(-3deg);
+          transform: perspective(1000px) rotateY(-3deg);
+}
+section.page.clams.turned {
+  -webkit-transform: perspective(1000px) rotateY(-164deg);
+          transform: perspective(1000px) rotateY(-164deg);
+}
