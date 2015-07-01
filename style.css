@@ -164,12 +164,29 @@ section.page.audrey .route-method {
 section.page.audrey .which {
   font-size: 12px;
 }
-section.page.team {
+section.page.audrey2 {
   -webkit-transform: perspective(5000px) rotateY(0deg);
           transform: perspective(5000px) rotateY(0deg);
   z-index: 995;
 }
+section.page.audrey2.turned {
+  -webkit-transform: perspective(5000px) rotateY(-161deg);
+          transform: perspective(5000px) rotateY(-161deg);
+}
+section.page.team {
+  -webkit-transform: perspective(5000px) rotateY(0deg);
+          transform: perspective(5000px) rotateY(0deg);
+  z-index: 994;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
 section.page.team.turned {
   -webkit-transform: perspective(5000px) rotateY(-161deg);
           transform: perspective(5000px) rotateY(-161deg);
+}
+section.page.team img {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 600px;
 }

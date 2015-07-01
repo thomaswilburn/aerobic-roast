@@ -146,10 +146,29 @@ section.page.audrey {
   }
 }
 
-section.page.team {
+section.page.audrey2 {
   transform: perspective(@perspective) rotateY(0deg);
   z-index: 995;
   &.turned {
     transform: perspective(@perspective) rotateY(-161deg);
+  }
+}
+
+section.page.team {
+  transform: perspective(@perspective) rotateY(0deg);
+  z-index: 994;
+  &.turned {
+    transform: perspective(@perspective) rotateY(-161deg);
+  }
+
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+
+  img {
+    padding-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    // margin: auto;
   }
 }
