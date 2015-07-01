@@ -133,15 +133,36 @@ section.page.audrey {
           transform: perspective(5000px) rotateY(-0.05deg);
   z-index: 996;
   font-size: 16px;
+  text-align: center;
 }
 section.page.audrey.turned {
   -webkit-transform: perspective(5000px) rotateY(-162deg);
           transform: perspective(5000px) rotateY(-162deg);
 }
 section.page.audrey .road {
+  padding-top: 10px;
   max-width: 400px;
   margin: auto;
-  text-align: left;
+  font-size: 12px;
+}
+section.page.audrey .route {
+  padding-bottom: 10px;
+  display: inline-block;
+}
+section.page.audrey .road-name {
+  background: black;
+  color: white;
+}
+section.page.audrey .route-name {
+  font-size: 16px;
+}
+section.page.audrey .route-method {
+  display: inline-block;
+  width: 65px;
+  padding: 2px;
+}
+section.page.audrey .which {
+  font-size: 12px;
 }
 section.page.team {
   -webkit-transform: perspective(5000px) rotateY(0deg);

@@ -20,7 +20,7 @@
     
     </section>
     
-    <section class="page thomas">
+    <section class="page thomas turned">
     
       <canvas class="prints"></canvas>
       
@@ -40,7 +40,7 @@
 
     <section class="page audrey">
 
-      <h1>What will we do without you?</h1>
+      <h1>It's hard to imagine what we'll do without you...</h1>
       <div id="trafficContainer"></div>
 
     </section>
@@ -54,29 +54,38 @@
   <script type="text/html" id="road-template">
     <div class="road">
       <h2 class="road-name">Eastbound</h2>
+
       <% trafficData.forEach(function(route) { %>
+        
         <div class="route">
-          <span class="route-name"><%= route.route %></span>
+          
+          <div class="route-name"><%= route.route %></div>
+          
           <div class="route-method" style="background: <%=route.regularcolor%>">
             <div class="time">
-              <%= route.regular %>
+              <span style="color: <%= route.regular ? 'black' : 'red'%>; font-weight: <%= route.regular ? '400' : '700'%>"><%= route.regular ? route.regular : 'X' %></span>
             </div>
-            <div class="which"></div>
+            <div class="which">MIN</div>
           </div>
+          
           <div class="route-method" style="background: <%=route.hovcolor%>">
             <div class="time">
-              <%= route.hov %>
+              <span style="color: <%= route.hov ? 'black' : 'red'%>; font-weight: <%= route.hov ? '400' : '700'%>"><%= route.hov ? route.hov : 'X' %></span>
             </div>
             <div class="which">HOV</div>
           </div>
+          
           <div class="route-method" style="background: <%=route.expresscolor%>">
             <div class="time">
-              <%= route.express %>
+              <span style="color: <%= route.express ? 'black' : 'red'%>; font-weight: <%= route.express ? '400' : '700'%>"><%= route.express ? route.express : 'X' %></span>
             </div>
-            <div class="which">Express</div>
+            <div class="which">EXPRESS</div>
           </div>
+
         </div>
+
       <% }); %>
+
     </div>
   </script>
 

@@ -7,28 +7,13 @@ var trafficData = [
     route: "Seattle-New Haven"
   },
   { 
-    route: "Aeneas-Spokane"
-  },
-  { 
     route: "Camano Island-Ephrata"
   },
   { 
-    route: "Enumclaw-Steilacoom"
+    route: "Poulsbo-Aeneas"
   },
   { 
-    route: "Ephrata-Camano Island"
-  },
-  { 
-    route: "New Haven-Seattle"
-  },
-  { 
-    route: "Poulsbo-Skamokawa"
-  },
-  { 
-    route: "Skamokawa-Poulsbo"
-  },
-  { 
-    route: "Spokane-Aeneas"
+    route: "Skamokawa-Spokane"
   },
   { 
     route: "Steilacoom-Enumclaw"
@@ -41,19 +26,32 @@ var randomNumber = function() {
   return num;
 }
 
-var randomColor = function() {
-  return Math.round((Math.random() * 225));
+var randomRGB = function() {
+  return Math.round((Math.random() * 255));
 }
 
-trafficData.forEach(function(route) {
-  route.regular = randomNumber();
-  route.hov = randomNumber();
-  route.express = randomNumber();
-  route.regularcolor = "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")";
-  route.hovcolor = "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")";
-  route.expresscolor = "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")";
-})
+var randomColor = function() {
+  return "rgb(" + randomRGB() + "," + randomRGB() + "," + randomRGB() + ")";
+}
 
-document.querySelector("#trafficContainer").innerHTML = template({ trafficData: trafficData });
+var colorTraffic = function() {
+  trafficData.forEach(function(route) {
+    route.regular = randomNumber();
+    route.hov = randomNumber();
+    route.express = randomNumber();
+    route.regularcolor = route.regular ? randomColor() : "#DDD";
+    route.hovcolor = route.hov ? randomColor() : "#DDD";
+    route.expresscolor = route.express ? randomColor() : "#DDD";
+    route.color = route.reguarl
+  })
+
+  document.querySelector("#trafficContainer").innerHTML = template({ trafficData: trafficData });
+}
+
+colorTraffic();
+
+setInterval(function(){
+  colorTraffic();
+},2000);
 
 
