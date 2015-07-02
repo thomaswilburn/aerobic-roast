@@ -23,7 +23,7 @@ document.body.addEventListener("touchend", function(e) {
     var dy = touch.clientY - previous.clientY;
     if (Math.abs(dy) > 100) return; //reject non-horizontal swipes
     var distance = Math.abs(dx);
-    if (distance > 150) {
+    if (distance > 100) {
       //swipe occurred!
       var detail = { direction: "left" };
       if (dx > 0) {

@@ -55,8 +55,8 @@ section.page {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border: 1px solid gray;
-  background: -webkit-linear-gradient(top, white, #eeeeee);
-  background: linear-gradient(to bottom, white, #eeeeee);
+  background: -webkit-linear-gradient(left, #dddddd, #f8f8f8);
+  background: linear-gradient(to right, #dddddd, #f8f8f8);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,8 +81,7 @@ section.page::after {
           transform-origin: 50% 50%;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
-  background: -webkit-linear-gradient(top, #f8f8f8, #eeeeee);
-  background: linear-gradient(to bottom, #f8f8f8, #eeeeee);
+  background: #CCC;
   top: 0;
   left: 0;
   width: 100%;
@@ -93,7 +92,8 @@ section.page::after {
 section.page.cover {
   -webkit-transform: perspective(5000px) rotateY(-0.2deg);
           transform: perspective(5000px) rotateY(-0.2deg);
-  background: #6565dd;
+  background: -webkit-linear-gradient(left, #5d5ddb, #6565dd);
+  background: linear-gradient(to right, #5d5ddb, #6565dd);
   color: white;
   z-index: 999;
 }
@@ -123,6 +123,21 @@ section.page.clams.turned {
 }
 section.page.clams video {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.page.clams .label {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  color: white;
+  font-size: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
 }
 section.page.thomas {
   -webkit-transform: perspective(5000px) rotateY(-0.1deg);
@@ -190,13 +205,20 @@ section.page.team {
   -webkit-transform: perspective(5000px) rotateY(0deg);
           transform: perspective(5000px) rotateY(0deg);
   z-index: 994;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
+  color: white;
+  background: -webkit-linear-gradient(left, #3c3041, #4a3b50);
+  background: linear-gradient(to right, #3c3041, #4a3b50);
 }
 section.page.team.turned {
   -webkit-transform: perspective(5000px) rotateY(-161deg);
           transform: perspective(5000px) rotateY(-161deg);
+}
+section.page.team h1 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 16px;
 }
 section.page.team img {
   padding-top: 20px;
