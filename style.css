@@ -35,6 +35,11 @@ main.book {
   -webkit-transition: -webkit-transform 1s ease-in-out;
           transition: transform 1s ease-in-out;
 }
+@media (min-width: 900px) {
+  main.book {
+    max-width: 50%;
+  }
+}
 .ready main.book {
   -webkit-transform: perspective(5000px) translateZ(-50px) rotateY(-10deg);
           transform: perspective(5000px) translateZ(-50px) rotateY(-10deg);
@@ -88,6 +93,11 @@ section.page::after {
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+@media (min-width: 900px) {
+  section.page {
+    padding: 100px;
+  }
 }
 section.page.cover {
   -webkit-transform: perspective(5000px) rotateY(-0.2deg);
@@ -223,5 +233,4 @@ section.page.team h1 {
 section.page.team img {
   padding-top: 20px;
   width: 100%;
-  max-width: 600px;
 }
