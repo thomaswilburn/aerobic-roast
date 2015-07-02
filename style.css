@@ -93,6 +93,8 @@ section.page::after {
 section.page.cover {
   -webkit-transform: perspective(5000px) rotateY(-0.2deg);
           transform: perspective(5000px) rotateY(-0.2deg);
+  background: #6565dd;
+  color: white;
   z-index: 999;
 }
 section.page.cover.turned {
@@ -102,6 +104,14 @@ section.page.cover.turned {
 section.page.cover h1 {
   text-align: center;
 }
+section.page.cover .hint {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 8px;
+  font-weight: bold;
+}
 section.page.clams {
   -webkit-transform: perspective(5000px) rotateY(-0.15deg);
           transform: perspective(5000px) rotateY(-0.15deg);
@@ -110,6 +120,9 @@ section.page.clams {
 section.page.clams.turned {
   -webkit-transform: perspective(5000px) rotateY(-164deg);
           transform: perspective(5000px) rotateY(-164deg);
+}
+section.page.clams video {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
 }
 section.page.thomas {
   -webkit-transform: perspective(5000px) rotateY(-0.1deg);
