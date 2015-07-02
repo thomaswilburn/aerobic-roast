@@ -163,13 +163,11 @@ section.page.thomas h1,
 section.page.thomas p {
   z-index: 999;
 }
-@media (max-with: 400px) {
-  section.page.thomas h1 {
-    font-size: 13px;
-  }
-  section.page.thomas p {
-    font-size: 8px;
-  }
+section.page.thomas h1 {
+  font-size: 13px;
+}
+section.page.thomas p {
+  font-size: 8px;
 }
 section.page.thomas .prints {
   position: absolute;
@@ -183,8 +181,8 @@ section.page.audrey {
   -webkit-transform: perspective(5000px) rotateY(-0.05deg);
           transform: perspective(5000px) rotateY(-0.05deg);
   z-index: 996;
-  font-size: 16px;
   text-align: center;
+  font-size: 11px;
 }
 section.page.audrey.turned {
   -webkit-transform: perspective(5000px) rotateY(-162deg);
@@ -215,22 +213,17 @@ section.page.audrey .route-method {
 section.page.audrey .which {
   font-size: 12px;
 }
-@media (max-with: 400px) {
-  section.page.audrey {
-    font-size: 11px;
-  }
-  section.page.audrey h1 {
-    font-size: 13px;
-  }
-  section.page.audrey .road-name {
-    font-size: 13px;
-  }
-  section.page.audrey .route-name {
-    font-size: 13px;
-  }
-  section.page.audrey .which {
-    font-size: 10px;
-  }
+section.page.audrey h1 {
+  font-size: 13px;
+}
+section.page.audrey .road-name {
+  font-size: 13px;
+}
+section.page.audrey .route-name {
+  font-size: 13px;
+}
+section.page.audrey .which {
+  font-size: 10px;
 }
 section.page.audrey2 {
   -webkit-transform: perspective(5000px) rotateY(0deg);
@@ -241,13 +234,11 @@ section.page.audrey2.turned {
   -webkit-transform: perspective(5000px) rotateY(-161deg);
           transform: perspective(5000px) rotateY(-161deg);
 }
-@media (max-with: 400px) {
-  section.page.audrey2 h1 {
-    font-size: 13px;
-  }
-  section.page.audrey2 p {
-    font-size: 8px;
-  }
+section.page.audrey2 h1 {
+  font-size: 13px;
+}
+section.page.audrey2 p {
+  font-size: 8px;
 }
 section.page.team {
   -webkit-transform: perspective(5000px) rotateY(0deg);
