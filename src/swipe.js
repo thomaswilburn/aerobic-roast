@@ -7,7 +7,10 @@ document.body.addEventListener("touchstart", function(e) {
   var pointers = touchTracking.pointers;
   for (var i = 0; i < e.touches.length; i++) {
     var touch = e.touches[i];
-    pointers[touch.identifier] = touch;
+    pointers[touch.identifier] = {
+      x: touch.clientX,
+      y: touch.clientY
+    };
   }
 });
 
@@ -19,8 +22,8 @@ document.body.addEventListener("touchend", function(e) {
     var previous = pointers[touch.identifier];
     if (!previous) return;
     pointers[touch.identifier] = null;
-    var dx = touch.clientX - previous.clientX;
-    var dy = touch.clientY - previous.clientY;
+    var dx = touch.clientX - previous.x;
+    var dy = touch.clientY - previous.y;
     if (Math.abs(dy) > 100) return; //reject non-horizontal swipes
     var distance = Math.abs(dx);
     if (distance > 100) {

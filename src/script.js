@@ -12,7 +12,6 @@ var cover = document.querySelector(".page.cover");
 var yay = document.querySelector(".page.clams");
 
 var turn = function(back) {
-  console.log("turn", back);
   var next;
   if (back) {
     next = document.querySelector(".page:not(.turned)").previousElementSibling;
