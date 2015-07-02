@@ -143,11 +143,16 @@ section.page.thomas {
   
   h1, p {
     z-index: 999;
-    font-size: 13px;
   }
-  
-  p {
-    font-size: 8px;
+
+  @media @mobile {
+    h1 {
+      font-size: 13px;
+    }
+    
+    p {
+      font-size: 8px;
+    }
   }
   
   .prints {
@@ -164,13 +169,6 @@ section.page.audrey {
   transform: perspective(@perspective) rotateY(-.05deg);
   z-index: 996;
 
-  h1 {
-    font-size: 13px;
-  }
-  
-  p {
-    font-size: 8px;
-  }
   &.turned {
     transform: perspective(@perspective) rotateY(-162deg);
   }
@@ -201,6 +199,23 @@ section.page.audrey {
   .which {
     font-size: 12px;
   }
+
+  @media @mobile {
+    font-size: 11px;
+    h1 {
+      font-size: 13px;
+    }
+    .road-name {
+      font-size: 13px;
+    }
+    .route-name {
+      font-size: 13px;
+    }
+
+    .which {
+      font-size: 10px;
+    }
+  }
 }
 
 section.page.audrey2 {
@@ -209,13 +224,16 @@ section.page.audrey2 {
   &.turned {
     transform: perspective(@perspective) rotateY(-161deg);
   }
+  @media @mobile {
     h1 {
-    font-size: 13px;
+      font-size: 13px;
+    }
+    
+    p {
+      font-size: 8px;
+    }
   }
-  
-  p {
-    font-size: 8px;
-  }
+
 }
 
 section.page.team {
