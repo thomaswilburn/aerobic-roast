@@ -12,24 +12,11 @@ onResize();
 var print = new Image();
 print.src = "./print.png";
 
-var due = 0;
-
-var update = function() {
-  context.fillStyle = "rgba(255, 255, 255, .05)";
-  context.fillRect(0, 0, canvas.width, canvas.height);
-  if (due > Date.now()) {
-    requestAnimationFrame(update);
-  } else {
-    due = 0;
-  }
-};
-
 var placePrint = function(x, y) {
   var pWidth = 80;
   var pHeight = 100;
+  context.globalAlpha = .2;
   context.drawImage(print, x - pWidth / 2, y - pHeight / 2, pWidth, pHeight);
-  if (!due) requestAnimationFrame(update);
-  due = Date.now() + 1000 * 1;
 }
 
 document.querySelector(".page.thomas").addEventListener("touchstart", function(e) {

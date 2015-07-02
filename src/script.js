@@ -20,12 +20,6 @@ var turn = function(back) {
   }
   if (!next || !next.classList.contains("page")) return;
   next.classList.toggle("turned");
-  if (cover.classList.contains("turned") && !yay.classList.contains("turned")) {
-    //move from cover to video
-    video.play();
-  } else {
-    video.pause();
-  }
 };
 
 document.body.addEventListener("swipe", function(e) {
