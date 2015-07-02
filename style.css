@@ -162,9 +162,10 @@ section.page.thomas.turned {
 section.page.thomas h1,
 section.page.thomas p {
   z-index: 999;
+  font-size: 13px;
 }
 section.page.thomas p {
-  font-size: 10px;
+  font-size: 8px;
 }
 section.page.thomas .prints {
   position: absolute;
@@ -180,6 +181,12 @@ section.page.audrey {
   z-index: 996;
   font-size: 16px;
   text-align: center;
+}
+section.page.audrey h1 {
+  font-size: 13px;
+}
+section.page.audrey p {
+  font-size: 8px;
 }
 section.page.audrey.turned {
   -webkit-transform: perspective(5000px) rotateY(-162deg);
@@ -218,6 +225,12 @@ section.page.audrey2 {
 section.page.audrey2.turned {
   -webkit-transform: perspective(5000px) rotateY(-161deg);
           transform: perspective(5000px) rotateY(-161deg);
+}
+section.page.audrey2 h1 {
+  font-size: 13px;
+}
+section.page.audrey2 p {
+  font-size: 8px;
 }
 section.page.team {
   -webkit-transform: perspective(5000px) rotateY(0deg);

@@ -143,10 +143,11 @@ section.page.thomas {
   
   h1, p {
     z-index: 999;
+    font-size: 13px;
   }
   
   p {
-    font-size: 10px;
+    font-size: 8px;
   }
   
   .prints {
@@ -162,6 +163,14 @@ section.page.thomas {
 section.page.audrey {
   transform: perspective(@perspective) rotateY(-.05deg);
   z-index: 996;
+
+  h1 {
+    font-size: 13px;
+  }
+  
+  p {
+    font-size: 8px;
+  }
   &.turned {
     transform: perspective(@perspective) rotateY(-162deg);
   }
@@ -199,6 +208,13 @@ section.page.audrey2 {
   z-index: 995;
   &.turned {
     transform: perspective(@perspective) rotateY(-161deg);
+  }
+    h1 {
+    font-size: 13px;
+  }
+  
+  p {
+    font-size: 8px;
   }
 }
 
